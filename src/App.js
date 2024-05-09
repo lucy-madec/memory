@@ -1,3 +1,4 @@
+import Button from './components/Button/Button';
 import logo from './logo.svg';
 import './App.css';
 
