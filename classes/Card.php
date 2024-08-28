@@ -10,4 +10,3 @@ class Card {
         $this->pairId = $pairId;
     }
 }
-?>
