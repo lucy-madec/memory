@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         secondCard = this;
+        lockBoard = true; // Empêche le retournement d'autres cartes avant la résolution
         checkForMatch();
     }
 
@@ -33,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function unflipCards() {
-        lockBoard = true;
-
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
             resetBoard();
-        }, 1500);
+        }, 1500); // Ajoute un délai pour montrer les deux cartes avant qu'elles ne se retournent
     }
 
     function resetBoard() {

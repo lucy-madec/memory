@@ -32,12 +32,12 @@ body {
     background-position: center;
 }
 
-.memory-card.flipped .card-front {
-    transform: rotateY(180deg);
+.memory-card .card-front {
+    transform: rotateY(180deg); /* Cache le front par défaut */
 }
 
-.memory-card.flipped .card-back {
-    transform: rotateY(0);
+.memory-card .card-back {
+    transform: rotateY(0); /* Montre le dos par défaut */
 }
 
 .row-cols-4>.col {
