@@ -38,7 +38,7 @@ shuffle($cards);
                                     <img src="assets/img/<?php echo $card['image']; ?>" class="card-img-top"
                                         alt="Memory Card">
                                 </div>
-                                <div class="card-back bg-secondary"></div>
+                                <div class="card-back"></div>
                             </div>
                         </div>
                     <?php endforeach; ?>

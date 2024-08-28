@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
-
         resetBoard();
     }
 
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
-
             resetBoard();
         }, 1500);
     }
