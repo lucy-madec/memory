@@ -1,5 +1,6 @@
 <?php
-class Game {
+class Game
+{
     private $conn;
     private $table_name = "games";
 
@@ -7,20 +8,26 @@ class Game {
     public $score;
     public $cards = [];
 
-    public function __construct($db) {
+    public function __construct($db)
+    {
         $this->conn = $db;
     }
 
-    public function startGame($numPairs) {
-        // Logique pour initialiser les cartes du jeu
-        $query = "SELECT * FROM cards ORDER BY RAND() LIMIT " . ($numPairs * 2);
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
+    public function startGame($numPairs)
+    {
+        $this->cards = [];
 
-        $this->cards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        for ($i = 1; $i <= $numPairs; $i++) {
+            $this->cards[] = ['id' => $i * 2 - 1, 'image' => "image$i.png", 'pair_id' => $i];
+            $this->cards[] = ['id' => $i * 2, 'image' => "image$i.png", 'pair_id' => $i];
+        }
+
+        shuffle($this->cards);
     }
 
-    public function endGame() {
+
+    public function endGame()
+    {
         $query = "INSERT INTO " . $this->table_name . " SET player_id=:player_id, score=:score";
         $stmt = $this->conn->prepare($query);
 

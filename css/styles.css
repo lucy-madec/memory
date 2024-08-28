@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.memory-card {
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.memory-card .card-front,
+.memory-card .card-back {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.memory-card .card-back {
+    transform: rotateY(180deg);
+}
+
+.memory-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.memory-card.flipped .card-back {
+    transform: rotateY(0);
+}

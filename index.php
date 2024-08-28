@@ -1,0 +1,60 @@
+<?php
+include_once 'classes/Database.php';
+include_once 'classes/Game.php';
+
+session_start();
+
+// Connexion à la base de données
+$database = new Database();
+$db = $database->getConnection();
+
+// Création d'une nouvelle partie
+$game = new Game($db);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $numPairs = intval($_POST['numPairs']);
+    $game->startGame($numPairs);
+
+    $_SESSION['cards'] = $game->cards;
+    header("Location: play.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center">Memory</h1>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <form method="POST" action="index.php">
+                    <div class="mb-3">
+                        <label for="numPairs" class="form-label">Nombre de paires :</label>
+                        <select class="form-select" name="numPairs" id="numPairs">
+                            <?php for ($i = 3; $i <= 12; $i++): ?>
+                                <option value="<?php echo $i; ?>"><?php echo $i; ?> paires</option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Commencer le jeu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
