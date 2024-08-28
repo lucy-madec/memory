@@ -6,12 +6,18 @@ body {
     position: relative;
     cursor: pointer;
     perspective: 1000px;
+    width: 100%;
+    height: 120px;
+    /* Ajuste la hauteur des cartes ici */
+    max-width: 120px;
+    /* Limite la largeur des cartes */
+    margin: auto;
 }
 
 .memory-card .card-front,
 .memory-card .card-back {
     width: 100%;
-    height: 150px;
+    height: 100%;
     border-radius: 8px;
     position: absolute;
     backface-visibility: hidden;
@@ -20,6 +26,10 @@ body {
 
 .memory-card .card-back {
     transform: rotateY(180deg);
+    background-image: url('assets/img/card-back.png');
+    /* Image de dos de carte */
+    background-size: cover;
+    background-position: center;
 }
 
 .memory-card.flipped .card-front {
@@ -28,4 +38,10 @@ body {
 
 .memory-card.flipped .card-back {
     transform: rotateY(0);
+}
+
+.row-cols-4>.col {
+    flex: 0 0 25%;
+    /* 4 cartes par ligne */
+    max-width: 25%;
 }

@@ -30,9 +30,9 @@ shuffle($cards);
         <h1 class="text-center">Memory</h1>
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
-                <div class="row">
+                <div class="row row-cols-4">
                     <?php foreach ($cards as $card): ?>
-                        <div class="col-3 mb-4">
+                        <div class="col mb-4">
                             <div class="card memory-card" data-pair-id="<?php echo $card['pair_id']; ?>">
                                 <div class="card-front">
                                     <img src="assets/img/<?php echo $card['image']; ?>" class="card-img-top"
@@ -46,6 +46,7 @@ shuffle($cards);
             </div>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
