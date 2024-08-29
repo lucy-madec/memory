@@ -1,43 +1,42 @@
-body {
-    background-color: #f8f9fa;
-}
-
-.memory-game {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .memory-card {
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    margin: 10px;
-    width: 120px;
+    cursor: pointer;
+    perspective: 1000px;
+    width: 100%;
     height: 120px;
-}
-
-.memory-card.flipped {
-    transform: rotateY(180deg);
+    /* Ajuste la hauteur des cartes ici */
+    max-width: 120px;
+    /* Limite la largeur des cartes */
+    margin: auto;
 }
 
 .memory-card .card-front,
 .memory-card .card-back {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
     position: absolute;
     backface-visibility: hidden;
-    border-radius: 5px;
+    transition: transform 0.5s;
 }
 
 .memory-card .card-back {
+    transform: rotateY(180deg);
     background-image: url('assets/img/back-card.png');
     background-size: cover;
     background-position: center;
 }
 
-.memory-card .card-front {
+.memory-card.flipped .card-front {
     transform: rotateY(180deg);
+}
+
+.memory-card.flipped .card-back {
+    transform: rotateY(0);
+}
+
+.row-cols-4>.col {
+    flex: 0 0 25%;
+    /* 4 cartes par ligne */
+    max-width: 25%;
 }

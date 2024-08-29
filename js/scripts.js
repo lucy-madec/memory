@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         secondCard = this;
-        lockBoard = true;
         checkForMatch();
     }
 
@@ -34,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function unflipCards() {
+        lockBoard = true;
+
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
