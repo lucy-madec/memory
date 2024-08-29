@@ -25,19 +25,27 @@ body {
 }
 
 .memory-card .card-back {
-    transform: rotateY(180deg);
+    transform: rotateY(0);
+    /* Affiche le dos de la carte par défaut */
     background-image: url('assets/img/card-back.png');
-    /* Image de dos de carte */
+    /* Assure-toi que le chemin est correct */
     background-size: cover;
     background-position: center;
 }
 
 .memory-card .card-front {
-    transform: rotateY(180deg); /* Cache le front par défaut */
+    transform: rotateY(180deg);
+    /* Cache le front par défaut */
 }
 
-.memory-card .card-back {
-    transform: rotateY(0); /* Montre le dos par défaut */
+.memory-card.flipped .card-front {
+    transform: rotateY(0);
+    /* Montre le front lorsque la carte est retournée */
+}
+
+.memory-card.flipped .card-back {
+    transform: rotateY(180deg);
+    /* Cache le dos lorsque la carte est retournée */
 }
 
 .row-cols-4>.col {
