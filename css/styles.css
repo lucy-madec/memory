@@ -33,7 +33,7 @@ body {
 }
 
 .memory-card .card-back {
-    background-image: url('assets/img/card-back.png');
+    background-image: url('assets/img/back-card.png');
     background-size: cover;
     background-position: center;
 }
