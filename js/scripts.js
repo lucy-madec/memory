@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         secondCard = this;
-        lockBoard = true; // Bloque le tableau pendant la vérification
+        lockBoard = true;
         checkForMatch();
     }
 
     function checkForMatch() {
-        const isMatch = firstCard.dataset.pairId === secondCard.dataset.pairId;
+        let isMatch = firstCard.dataset.pairId === secondCard.dataset.pairId;
         isMatch ? disableCards() : unflipCards();
     }
 
