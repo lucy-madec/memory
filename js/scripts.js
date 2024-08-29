@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let firstCard, secondCard;
 
     function flipCard() {
-        if (lockBoard) return; // Bloque le clic si le plateau est verrouillé
-        if (this === firstCard) return; // Empêche de cliquer deux fois sur la même carte
+        if (lockBoard) return;
+        if (this === firstCard) return;
 
-        this.classList.add('flipped'); // Ajoute la classe flipped pour montrer le front
+        this.classList.add('flipped');
 
         if (!hasFlippedCard) {
             hasFlippedCard = true;
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         secondCard = this;
-        lockBoard = true; // Verrouille le plateau
+        lockBoard = true; // Bloque le tableau pendant la vérification
         checkForMatch();
     }
 
     function checkForMatch() {
-        let isMatch = firstCard.dataset.pairId === secondCard.dataset.pairId;
+        const isMatch = firstCard.dataset.pairId === secondCard.dataset.pairId;
         isMatch ? disableCards() : unflipCards();
     }
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
             resetBoard();
-        }, 1500); // Temps d'attente avant de retourner les cartes
+        }, 1500);
     }
 
     function resetBoard() {

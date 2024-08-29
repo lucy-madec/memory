@@ -2,46 +2,43 @@ body {
     background-color: #f8f9fa;
 }
 
-.memory-card {
-    position: relative;
-    cursor: pointer;
-    perspective: 1000px;
+.memory-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
-    height: 120px;
-    max-width: 120px;
-    margin: auto;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    margin: 10px;
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg);
 }
 
 .memory-card .card-front,
 .memory-card .card-back {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
     position: absolute;
     backface-visibility: hidden;
-    transition: transform 0.5s;
+    border-radius: 5px;
 }
 
 .memory-card .card-back {
-    transform: rotateY(0); /* Affiche le dos par défaut */
-    background-image: url('assets/img/card-back.png'); /* Chemin vers l'image du dos */
+    background-image: url('assets/img/card-back.png');
     background-size: cover;
     background-position: center;
 }
 
 .memory-card .card-front {
-    transform: rotateY(180deg); /* Cache le front par défaut */
-}
-
-.memory-card.flipped .card-front {
-    transform: rotateY(0); /* Montre le front quand la carte est retournée */
-}
-
-.memory-card.flipped .card-back {
-    transform: rotateY(180deg); /* Cache le dos quand la carte est retournée */
-}
-
-.row-cols-4 > .col {
-    flex: 0 0 25%;
-    max-width: 25%;
+    transform: rotateY(180deg);
 }
