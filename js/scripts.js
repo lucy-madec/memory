@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function flipCard() {
         if (lockBoard) return;
-        if (this === firstCard) return;
+        if (this.classList.contains('flipped')) return;
 
         this.classList.add('flipped');
 

@@ -34,13 +34,14 @@ shuffle($cards);
                     <?php foreach ($cards as $card): ?>
                         <div class="col mb-4">
                             <div class="card memory-card" data-pair-id="<?php echo $card['pair_id']; ?>">
-                                <div class="card-front">
-                                    <img src="assets/img/<?php echo $card['image']; ?>" class="card-img-top" alt="Memory Card">
-                                </div>
                                 <div class="card-back bg-secondary"></div>
+                                <div class="card-front">
+                                    <img src="assets/img/<?php echo $card['image']; ?>" class="card-img-top"
+                                        alt="Memory Card">
+                                </div>
                             </div>
                         </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
