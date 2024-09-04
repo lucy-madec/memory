@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </select>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Commencer le jeu</button>
+                        <button type="submit" class="btn btn-danger btn-lg">Commencer le jeu</button>
                     </div>
                 </form>
             </div>
