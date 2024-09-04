@@ -1,5 +1,6 @@
 body {
-    background-color: #f8f9fa;
+    background: url('../assets/img/background.webp') center;
+    background-size: cover;
 }
 
 .memory-card {
