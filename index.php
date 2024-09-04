@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-6">
                 <form method="POST" action="index.php">
                     <div class="mb-3">
-                        <label for="numPairs" class="form-label">Nombre de paires :</label>
+                        <label for="numPairs" class="form-label text-danger">Nombre de paires :</label>
                         <select class="form-select" name="numPairs" id="numPairs">
                             <?php for ($i = 3; $i <= 12; $i++): ?>
                                 <option value="<?php echo $i; ?>"><?php echo $i; ?> paires</option>
