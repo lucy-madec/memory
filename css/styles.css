@@ -19,6 +19,22 @@ body {
     font-style: normal;
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1.title-bordered {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: red;
+    text-align: center;
+}
+
 .memory-card {
     position: relative;
     cursor: pointer;

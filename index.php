@@ -45,7 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-light">
 
     <div class="container mt-5">
-        <h1 class="text-center text-danger">Creepy Memory</h1>
+        <div class="title-container">
+            <h1 class="title-bordered">Creepy Memory</h1>
+        </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
                 <form method="POST" action="index.php">
