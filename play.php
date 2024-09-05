@@ -19,15 +19,29 @@ shuffle($cards);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
+    <title>Creepy Memory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.webp" />
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-light">
 
     <div class="container mt-5">
-        <h1 class="text-center">Memory Game</h1>
+        <div class="title-container">
+            <h1 class="title-bordered text-danger">Creepy Memory</h1>
+        </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <div class="row row-cols-4">
