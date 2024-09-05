@@ -38,6 +38,9 @@ shuffle($cards);
 
 <body class="bg-light">
 
+    <!-- Bouton de retour à l'accueil -->
+    <a href="index.php" class="btn btn-danger back-home">Retour à l'accueil</a>
+
     <div class="container mt-5">
         <div class="title-container">
             <h1 class="title-bordered text-danger">Creepy Memory</h1>
@@ -57,12 +60,6 @@ shuffle($cards);
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
-        </div>
-        <!-- Bouton Retour à l'accueil -->
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-6 text-center">
-                <a href="index.php" class="btn btn-danger btn-lg">Retour à l'accueil</a>
             </div>
         </div>
     </div>

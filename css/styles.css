@@ -2,18 +2,18 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: auto; /* Affiche la scrollbar uniquement si nécessaire */
+    overflow-y: auto;
 }
 
 body {
     background: url('../assets/img/background.webp');
     background-position: top center;
-    background-repeat: repeat-y; /* Répète seulement verticalement */
-    background-size: auto; /* Laisse l'image à sa taille naturelle pour la répétition */
+    background-repeat: repeat-y;
+    background-size: auto; 
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
-    min-height: 100vh; /* Assure que le body occupe toute la hauteur */
+    min-height: 100vh;
 }
 
 .title-container {
@@ -27,7 +27,7 @@ h1.title-bordered {
     padding: 5px 15px;
     border-radius: 8px;
     text-align: center;
-    margin-top: -35px; /* Monte le h1 de 20px */
+    margin-top: -35px;
 }
 
 .label-bordered {
@@ -39,6 +39,27 @@ h1.title-bordered {
     width: fit-content;
 }
 
+/* Button back Home */
+.back-home {
+    position: absolute;
+    top: 20px;   /* Distance par rapport au haut */
+    left: 20px;  /* Distance par rapport à la gauche */
+    padding: 10px 20px;  /* Pour ajouter du padding autour du texte */
+    font-size: 16px;  /* Ajuste la taille du texte */
+    border-radius: 8px; /* Arrondir les bords */
+    text-decoration: none; /* Enlève le soulignement du lien */
+}
+
+.back-home:hover {
+    background-color: #cc0000; /* Change la couleur de fond au survol */
+}
+
+/* Button start */
+.button-start:hover {
+    background-color: #cc0000;
+}
+
+/* Cards */
 .memory-card {
     position: relative;
     cursor: pointer;
