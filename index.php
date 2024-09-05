@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="container mt-5">
         <div class="title-container">
-            <h1 class="title-bordered">Creepy Memory</h1>
+            <h1 class="title-bordered text-danger">Creepy Memory</h1>
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
