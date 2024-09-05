@@ -59,6 +59,12 @@ shuffle($cards);
                 </div>
             </div>
         </div>
+        <!-- Bouton Retour à l'accueil -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center">
+                <a href="index.php" class="btn btn-danger btn-lg">Retour à l'accueil</a>
+            </div>
+        </div>
     </div>
 
 
