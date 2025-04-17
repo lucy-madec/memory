@@ -107,7 +107,7 @@ h1.title-bordered {
     cursor: pointer;
     perspective: 1000px;
     width: 100%;
-    height: 120px;
+    height: 150px;
     margin: auto;
     transition: transform 0.3s ease;
 }
@@ -140,6 +140,13 @@ h1.title-bordered {
     transform: rotateY(-180deg);
     background-color: #fff;
     border: 2px solid #6c757d;
+}
+
+.memory-card .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
 }
 
 .memory-card.flipped .card-front {
@@ -217,7 +224,7 @@ h1.title-bordered {
     }
     
     .memory-card {
-        height: 100px;
+        height: 120px;
     }
 }
 
